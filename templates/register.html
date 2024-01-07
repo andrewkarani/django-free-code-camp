@@ -1,0 +1,24 @@
+<h1> Sign Up Below </h1>
+
+<!-- we want to show the error message here-->
+<style>
+  h5 {
+    color: red;
+  }
+</style>
+
+{% for message in message %}
+<h5>{{ message }}</h5>
+{% endfor %}
+<form method="POST" action="register">
+  {% csrf_token %}
+  <P>Username:</p>
+  <input type="text" name="username" />
+  <P>Email:</p>
+  <input type="email" name="email" />
+  <P>Password:</p>
+  <input type="password" name="password" />
+  <P>Repeat Password:</p>
+  <input type="password" name="password2" /><br>
+  <input type="submt"/>
+</form>
